@@ -1,5 +1,8 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import Counter from './components/Counter';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import Root from './routes';
 
-ReactDOM.render(<Counter name="React"/>, document.getElementById("app"));
+ReactDOM.render(
+  <Root />,
+  document.getElementById('app')
+);
