@@ -1,5 +1,6 @@
 import * as React from 'react';
-import Home from '../pages/Home';
+// import Home from '../pages/Home';
+import Home from './Home';
 import AddTodo from '../pages/AddTodo';
 import { Route, Redirect, BrowserRouter,Switch } from "react-router-dom";
 
