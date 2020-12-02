@@ -1,4 +1,5 @@
 import React from 'react';
+let styles = require('../../styles/Card.css');
 
 interface CardProps{
     id : number
@@ -13,10 +14,11 @@ interface CardState{
 }
 
 const Card = (param: CardProps) => {
+    console.log(styles);
     return (
         <div>
             Hello, ${param.id}  
-        </div>    
+        </div> 
     );
 }
 

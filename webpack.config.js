@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
     mode : "development",
     
@@ -14,13 +16,25 @@ module.exports = {
     devtool : "source-map",
 
     resolve: {
-        extensions : [".ts",".tsx",".js"]
+        modules: [path.join(__dirname, 'src'), 'node_modules'],
+        extensions: ['.ts', '.tsx', '.js', '.jsx', '.css', '.scss', '.json']
     },
 
     module : {
         rules : [
             //ts-loader will trans file .ts or .tsx extension
-            {test : /\.tsx?$/, loader: "ts-loader" } 
+            { 
+               test : /\.tsx?$/,
+               loader: "ts-loader" 
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    { loader: 'style-loader'},
+                    { loader: 'css-loader' }
+                ]
+
+              },
         ]
     },
 
