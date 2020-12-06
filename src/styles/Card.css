@@ -23,6 +23,7 @@
 .content{
     text-align: left;
     width : 90%;
+    color : red;
 }
 
 .content > article, .content-display{

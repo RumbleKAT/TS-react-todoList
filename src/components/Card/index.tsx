@@ -1,26 +1,33 @@
 import React from 'react';
-let styles = require<any>('../../styles/Card.css');
+import styles from '../../styles/Card.css';
 
-interface CardProps{
-    id : number
+interface CardProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLLIElement>, HTMLLIElement>{
+    id : string
     title? : string
     name? : string
     type? : string
     category? : string
 }
 
-interface CardState{
+class Card extends React.Component<CardProps>{
+    public render(){
+        console.log(this.props);
 
-}
+        const { title, name, id, type , ...liAttributes } = this.props; 
 
-const Card = (param: CardProps) => {
-    console.log(styles);
-    console.log(styles.content);
-    return (
-        <div className={styles.content}>
-            Hello, ${param.id}  
-        </div> 
-    );
+        return(
+            type === 'done' ?
+            <li {...liAttributes}>
+                <h1>{title}</h1>
+                <p>등록번호 : ${id}</p>
+            </li>
+            : 
+            <li {...liAttributes}>
+                <h1>{title}</h1>
+                <p>등록번호 : ${id}</p>
+            </li>
+        )
+    }
 }
 
 export default Card;
