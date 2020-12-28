@@ -1,4 +1,7 @@
 declare module '*.css' {
-    const content: { [className: string]: string };
-    export default content;
+    interface IClassNames{
+        [className: string] : string
+    }
+    const classNames : IClassNames
+    export = classNames;
 }
