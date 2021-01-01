@@ -1,8 +1,14 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, Redirect, RouteComponentProps } from 'react-router-dom';
 import Card from '../../components/Card';
 
 const Home : React.FC<RouteComponentProps> = props => {
+    
+    //componentDidMount, componentDidUpdate
+    // useEffect(()=>{
+
+    // });
+    
     return (
         <React.Fragment>
             <div>HOME</div>

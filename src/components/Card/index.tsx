@@ -1,13 +1,6 @@
 import React from 'react';
 import '../../styles/Card.css';
-
-interface CardProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLLIElement>, HTMLLIElement>{
-    id : string
-    title? : string
-    name? : string
-    type? : string
-    category? : string
-}
+import CardProps from '../../Interfaces/todoListInterface';
 
 class Card extends React.Component<CardProps>{
     public render(){
